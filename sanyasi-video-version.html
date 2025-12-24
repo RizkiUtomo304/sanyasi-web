@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wonderland - Destinasi Wisata Terbaik</title>
+    <title>Sanyasi - Destinasi Wisata Terbaik</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#F59E0B',  // amber-500 (orange)
+                        primary: '#F59E0B',   // amber-500 
                         secondary: '#F97316', // orange-500
                         accent: '#FDBA74',    // orange-300
-                        dark: '#1F2937',      // gray-800 (dark)
-                        light: '#111827'      // gray-900 (darker)
+                        dark: '#1F2937',      // gray-800 
+                        light: '#111827'      // gray-900 
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.6s ease-out',
@@ -43,64 +45,72 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         .hero-bg {
             background: linear-gradient(135deg, #10B981, #3B82F6);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
         }
-        
+
         @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
-        
+
         .card-hover {
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-        
+
         .card-hover:hover {
             transform: translateY(-10px) scale(1.02);
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
-        
+
         .feature-icon {
             transition: all 0.3s ease;
         }
-        
+
         .feature-icon:hover {
             transform: scale(1.1) rotate(10deg);
         }
-        
+
         .gallery-item {
             transition: all 0.3s ease;
         }
-        
+
         .gallery-item:hover {
             transform: scale(1.05);
             filter: brightness(1.1);
         }
-        
+
         .testimoni-card {
             transition: all 0.3s ease;
         }
-        
+
         .testimoni-card:hover {
             transform: translateY(-5px);
         }
-        
+
         .btn-primary {
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-        
+
         .btn-primary::before {
             content: '';
             position: absolute;
@@ -108,24 +118,24 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-        
+
         .btn-primary:hover::before {
             left: 100%;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            box-shadow: 0 8px 25px rgba(247, 243, 243, 0.123);
         }
-        
+
         .section-title {
             position: relative;
             display: inline-block;
         }
-        
+
         .section-title::after {
             content: '';
             position: absolute;
@@ -138,30 +148,47 @@
             border-radius: 2px;
             opacity: 0.7;
         }
-        
+
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
-        
+
         @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
         }
-        
+
         .colorful-bg {
             background: linear-gradient(45deg, #10B981, #3B82F6, #F59E0B, #065F46);
             background-size: 400% 400%;
             animation: gradientBG 10s ease infinite;
         }
-        
+
         @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
         }
     </style>
 </head>
+
 <body class="bg-light text-gray-800">
     <!-- Header -->
     <header class="fixed w-full z-50 bg-transparent">
@@ -169,15 +196,21 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <i class="fas fa-mountain text-orange-300 text-2xl mr-2"></i>
-                    <a href="#" class="text-xl font-bold text-orange-200">Wonderland</a>
+                    <a href="#" class="text-xl font-bold text-orange-200">Sanyasi</a>
                 </div>
                 <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Home</a>
-                    <a href="#destinations" class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Destinations</a>
-                    <a href="#facilities" class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Facilities</a>
-                    <a href="#gallery" class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Gallery</a>
-                    <a href="#testimonials" class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Testimonials</a>
-                    <a href="#contact" class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Contact</a>
+                    <a href="#home"
+                        class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Home</a>
+                    <a href="#destinations"
+                        class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Destinations</a>
+                    <a href="#facilities"
+                        class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Facilities</a>
+                    <a href="#gallery"
+                        class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Gallery</a>
+                    <a href="#testimonials"
+                        class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Testimonials</a>
+                    <a href="#contact"
+                        class="text-orange-200/80 hover:text-orange-100 font-medium nav-link transition duration-300">Contact</a>
                 </nav>
                 <div class="flex items-center md:hidden">
                     <button id="mobile-menu-button" class="outline-none">
@@ -187,12 +220,15 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-black/80 backdrop-blur-md py-4 px-4 nav-menu">
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-black/80 backdrop-blur-md py-4 px-4 nav-menu w-[200px] ml-auto">
             <a href="#home" class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Home</a>
-            <a href="#destinations" class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Destinations</a>
+            <a href="#destinations"
+                class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Destinations</a>
             <a href="#facilities" class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Facilities</a>
             <a href="#gallery" class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Gallery</a>
-            <a href="#testimonials" class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Testimonials</a>
+            <a href="#testimonials"
+                class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Testimonials</a>
             <a href="#contact" class="block py-2 text-orange-200/80 hover:text-orange-100 nav-link">Contact</a>
         </div>
     </header>
@@ -201,7 +237,9 @@
     <section id="home" class="min-h-screen flex items-center pt-16 relative overflow-hidden">
         <div class="absolute inset-0 z-0">
             <video autoplay muted loop playsinline class="w-full h-full object-cover">
-                <source src="Nature Video 30 Seconds_WhatsApp Status Video_Nature Background Videos.mp4" type="video/mp4">
+                <source
+                    src="No Copyright Drone Shots _ Royalty free drone shots _ free stock videos _ Drone footage nature shots.mp4"
+                    type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/60"></div>
@@ -210,30 +248,22 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div class="text-white">
                     <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-                        Explore the <span class="text-orange-200">Beauty</span> of Nature at <span class="text-orange-300">Wonderland</span>
+                        Explore the <span class="text-orange-200">Beauty</span> of Nature at <span
+                            class="text-orange-300">Sanyasi</span>
                     </h1>
                     <p class="text-lg mb-6 md:mb-8 max-w-lg text-white/90">
-                        Discover the best tourist destinations with breathtaking views, fresh air, and unforgettable experiences.
+                        Discover the best tourist destinations with breathtaking views, fresh air, and unforgettable
+                        experiences.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#destinations" class="bg-orange-600/80 text-white px-6 py-3 rounded-lg font-medium btn-primary hover:bg-orange-600">
+                        <a href="#destinations"
+                            class="bg-orange-600/80 text-white px-6 py-3 rounded-lg font-medium btn-primary hover:bg-orange-600">
                             <i class="fas fa-map-marker-alt mr-2"></i>Explore
                         </a>
-                        <a href="#contact" class="border border-orange-300/70 text-white px-6 py-3 rounded-lg font-medium btn-primary hover:bg-orange-300/10">
+                        <a href="#contact"
+                            class="border border-orange-300/70 text-white px-6 py-3 rounded-lg font-medium btn-primary hover:bg-orange-300/10">
                             <i class="fas fa-calendar-check mr-2"></i>Book Now
                         </a>
-                    </div>
-                </div>
-                <div class="flex justify-center mt-8 lg:mt-0">
-                    <div class="relative">
-                        <div class="w-56 h-56 sm:w-64 sm:h-64 bg-gray-900/20 backdrop-blur-sm rounded-2xl flex items-center justify-center p-6 floating">
-                            <div class="bg-gray-200 border-2 border-dashed rounded-2xl w-full h-full flex items-center justify-center">
-                                <i class="fas fa-mountain text-6xl text-gray-600"></i>
-                            </div>
-                        </div>
-                        <div class="absolute -top-4 -right-4 bg-orange-400/80 text-dark px-3 py-1 rounded-full text-sm font-bold shadow-lg animate-bounce">
-                            <i class="fas fa-star mr-1"></i>Best 2023
-                        </div>
                     </div>
                 </div>
             </div>
@@ -241,58 +271,75 @@
     </section>
 
     <!-- Destinations Section -->
-    <section id="destinations" class="py-20 bg-gradient-to-br from-gray-900/20 to-gray-800/20">
+    <section id="destinations" class="py-20 bg-gradient-to-br from-gray-900/20 to-gray-800/20" 
+    data-aos="fade-up"
+    data-aos-duration="800"
+    data-aos-easing="ease-in-out"
+    >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-gray-800/80 mb-4 section-title">Favorite Destinations</h2>
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-800/80 mb-4 section-title">Favorite Destinations
+                </h2>
                 <p class="text-gray-600/80 max-w-2xl mx-auto text-sm md:text-base">
                     Explore our best tourist destinations offering stunning natural views and unforgettable experiences.
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Destination 1 -->
-                <div class="bg-gradient-to-br from-gray-800/70 to-gray-700/70 rounded-xl shadow-md overflow-hidden card-hover animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-700/50 to-gray-600/50 w-full h-40 flex items-center justify-center">
+                <div
+                    class="bg-gradient-to-br from-gray-800/70 to-gray-700/70 rounded-xl shadow-md overflow-hidden card-hover animate-fade-in">
+                    <div
+                        class="bg-gradient-to-br from-gray-700/50 to-gray-600/50 w-full h-40 flex items-center justify-center">
                         <i class="fas fa-mountain text-4xl text-orange-600/70"></i>
                     </div>
                     <div class="p-4 text-white bg-gradient-to-b from-gray-800/70 to-gray-700/70">
                         <h3 class="text-lg font-bold mb-2">Beautiful Mountain</h3>
-                        <p class="text-sm opacity-90 mb-3">Enjoy the beauty of sunrise and fresh air at the mountain peak with 360-degree views.</p>
+                        <p class="text-sm opacity-90 mb-3">Enjoy the beauty of sunrise and fresh air at the mountain
+                            peak with 360-degree views.</p>
                         <div class="flex justify-between items-center">
                             <span class="bg-gray-200/30 px-2 py-1 rounded-full text-xs">$50</span>
-                            <a href="#" class="bg-gray-200/90 text-orange-600 px-3 py-1 rounded text-xs font-medium hover:bg-gray-200 transition">
+                            <a href="#"
+                                class="bg-gray-200/90 text-orange-600 px-3 py-1 rounded text-xs font-medium hover:bg-gray-200 transition">
                                 Details
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Destination 2 -->
-                <div class="bg-gradient-to-br from-gray-800/70 to-gray-700/70 rounded-xl shadow-md overflow-hidden card-hover animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-700/50 to-gray-600/50 w-full h-40 flex items-center justify-center">
+                <div
+                    class="bg-gradient-to-br from-gray-800/70 to-gray-700/70 rounded-xl shadow-md overflow-hidden card-hover animate-fade-in">
+                    <div
+                        class="bg-gradient-to-br from-gray-700/50 to-gray-600/50 w-full h-40 flex items-center justify-center">
                         <i class="fas fa-water text-4xl text-amber-600/70"></i>
                     </div>
                     <div class="p-4 text-white bg-gradient-to-b from-gray-800/70 to-gray-700/70">
                         <h3 class="text-lg font-bold mb-2">Blue Lake</h3>
-                        <p class="text-sm opacity-90 mb-3">Lake with crystal clear blue water perfect for swimming and relaxing.</p>
+                        <p class="text-sm opacity-90 mb-3">Lake with crystal clear blue water perfect for swimming and
+                            relaxing.</p>
                         <div class="flex justify-between items-center">
                             <span class="bg-gray-200/30 px-2 py-1 rounded-full text-xs">$35</span>
-                            <a href="#" class="bg-gray-200/90 text-amber-600 px-3 py-1 rounded text-xs font-medium hover:bg-gray-200 transition">
+                            <a href="#"
+                                class="bg-gray-200/90 text-amber-600 px-3 py-1 rounded text-xs font-medium hover:bg-gray-200 transition">
                                 Details
                             </a>
                         </div>
                     </div>
                 </div>
                 <!-- Destination 3 -->
-                <div class="bg-gradient-to-br from-gray-800/70 to-gray-700/70 rounded-xl shadow-md overflow-hidden card-hover animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-700/50 to-gray-600/50 w-full h-40 flex items-center justify-center">
+                <div
+                    class="bg-gradient-to-br from-gray-800/70 to-gray-700/70 rounded-xl shadow-md overflow-hidden card-hover animate-fade-in">
+                    <div
+                        class="bg-gradient-to-br from-gray-700/50 to-gray-600/50 w-full h-40 flex items-center justify-center">
                         <i class="fas fa-tree text-4xl text-orange-600/70"></i>
                     </div>
                     <div class="p-4 text-white bg-gradient-to-b from-gray-800/70 to-gray-700/70">
                         <h3 class="text-lg font-bold mb-2">Mystic Forest</h3>
-                        <p class="text-sm opacity-90 mb-3">Tropical forest with biodiversity and challenging hiking trails.</p>
+                        <p class="text-sm opacity-90 mb-3">Tropical forest with biodiversity and challenging hiking
+                            trails.</p>
                         <div class="flex justify-between items-center">
                             <span class="bg-gray-200/30 px-2 py-1 rounded-full text-xs">$70</span>
-                            <a href="#" class="bg-gray-200/90 text-orange-600 px-3 py-1 rounded text-xs font-medium hover:bg-gray-200 transition">
+                            <a href="#"
+                                class="bg-gray-200/90 text-orange-600 px-3 py-1 rounded text-xs font-medium hover:bg-gray-200 transition">
                                 Details
                             </a>
                         </div>
@@ -317,21 +364,24 @@
                         <i class="fas fa-hotel"></i>
                     </div>
                     <h3 class="text-base md:text-lg font-bold mb-2">Accommodation</h3>
-                    <p class="text-xs md:text-sm opacity-80">Comfortable rooms with direct nature views from the windows.</p>
+                    <p class="text-xs md:text-sm opacity-80">Comfortable rooms with direct nature views from the
+                        windows.</p>
                 </div>
                 <div class="bg-gray-900/20 backdrop-blur-sm rounded-xl p-4 text-center card-hover animate-fade-in">
                     <div class="feature-icon text-2xl md:text-3xl mb-3 text-orange-300">
                         <i class="fas fa-utensils"></i>
                     </div>
                     <h3 class="text-base md:text-lg font-bold mb-2">Restaurant</h3>
-                    <p class="text-xs md:text-sm opacity-80">Delicious food with local ingredients and international menu.</p>
+                    <p class="text-xs md:text-sm opacity-80">Delicious food with local ingredients and international
+                        menu.</p>
                 </div>
                 <div class="bg-gray-900/20 backdrop-blur-sm rounded-xl p-4 text-center card-hover animate-fade-in">
                     <div class="feature-icon text-2xl md:text-3xl mb-3 text-amber-300">
                         <i class="fas fa-shuttle-van"></i>
                     </div>
                     <h3 class="text-base md:text-lg font-bold mb-2">Transportation</h3>
-                    <p class="text-xs md:text-sm opacity-80">Safe and comfortable transportation between destinations.</p>
+                    <p class="text-xs md:text-sm opacity-80">Safe and comfortable transportation between destinations.
+                    </p>
                 </div>
                 <div class="bg-gray-900/20 backdrop-blur-sm rounded-xl p-4 text-center card-hover animate-fade-in">
                     <div class="feature-icon text-2xl md:text-3xl mb-3 text-red-300">
@@ -355,37 +405,43 @@
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
+                    <div
+                        class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
                         <i class="fas fa-image text-4xl text-orange-500/70"></i>
                     </div>
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
+                    <div
+                        class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
                         <i class="fas fa-image text-4xl text-orange-500/70"></i>
                     </div>
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
+                    <div
+                        class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
                         <i class="fas fa-image text-4xl text-orange-500/70"></i>
                     </div>
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
+                    <div
+                        class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
                         <i class="fas fa-image text-4xl text-orange-500/70"></i>
                     </div>
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
+                    <div
+                        class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
                         <i class="fas fa-image text-4xl text-orange-500/70"></i>
                     </div>
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-md animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
+                    <div
+                        class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
                         <i class="fas fa-image text-4xl text-orange-500/70"></i>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Video Gallery -->
             <div class="text-center mb-16">
                 <h3 class="text-xl md:text-2xl font-bold text-gray-800/80 mb-4">Video Gallery</h3>
@@ -396,12 +452,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="rounded-xl overflow-hidden shadow-md animate-fade-in">
                     <video controls class="w-full h-48 object-cover">
-                        <source src="Nature Video 30 Seconds_WhatsApp Status Video_Nature Background Videos.mp4" type="video/mp4">
+                        <source src="Nature Video 30 Seconds_WhatsApp Status Video_Nature Background Videos.mp4"
+                            type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="rounded-xl overflow-hidden shadow-md animate-fade-in">
-                    <div class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
+                    <div
+                        class="bg-gradient-to-br from-gray-800/50 to-gray-700/50 w-full h-48 flex items-center justify-center">
                         <i class="fas fa-video text-4xl text-orange-500/70"></i>
                     </div>
                 </div>
@@ -419,7 +477,8 @@
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 text-center testimoni-card animate-fade-in shadow-md">
+                <div
+                    class="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 text-center testimoni-card animate-fade-in shadow-md">
                     <div class="text-yellow-400 text-xl mb-3">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -427,11 +486,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-sm md:text-base mb-3 italic text-gray-300">"Amazing experience! Beautiful views and friendly service made me want to come back again."</p>
+                    <p class="text-sm md:text-base mb-3 italic text-gray-300">"Amazing experience! Beautiful views and
+                        friendly service made me want to come back again."</p>
                     <h4 class="font-bold text-orange-700 text-sm md:text-base">- John Smith</h4>
                     <p class="text-xs text-gray-400">New York</p>
                 </div>
-                <div class="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 text-center testimoni-card animate-fade-in shadow-md">
+                <div
+                    class="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 text-center testimoni-card animate-fade-in shadow-md">
                     <div class="text-yellow-400 text-xl mb-3">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -439,11 +500,13 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-sm md:text-base mb-3 italic text-gray-300">"Wonderland is truly a perfect place for family vacation. The kids were very happy!"</p>
+                    <p class="text-sm md:text-base mb-3 italic text-gray-300">"Wonderland is truly a perfect place for
+                        family vacation. The kids were very happy!"</p>
                     <h4 class="font-bold text-orange-700 text-sm md:text-base">- Sarah Johnson</h4>
                     <p class="text-xs text-gray-400">Los Angeles</p>
                 </div>
-                <div class="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 text-center testimoni-card animate-fade-in shadow-md">
+                <div
+                    class="bg-gray-900/60 backdrop-blur-sm rounded-xl p-4 text-center testimoni-card animate-fade-in shadow-md">
                     <div class="text-yellow-400 text-xl mb-3">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -451,7 +514,8 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="text-sm md:text-base mb-3 italic text-gray-300">"The sunrise view at Beautiful Mountain is truly unforgettable. Perfect place for vacation!"</p>
+                    <p class="text-sm md:text-base mb-3 italic text-gray-300">"The sunrise view at Beautiful Mountain is
+                        truly unforgettable. Perfect place for vacation!"</p>
                     <h4 class="font-bold text-orange-700 text-sm md:text-base">- Michael Brown</h4>
                     <p class="text-xs text-gray-400">Chicago</p>
                 </div>
@@ -492,16 +556,20 @@
                     <div class="mt-6">
                         <h4 class="text-lg font-bold mb-3">Follow Us</h4>
                         <div class="flex space-x-3">
-                            <a href="#" class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
+                            <a href="#"
+                                class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
                                 <i class="fab fa-facebook-f text-sm"></i>
                             </a>
-                            <a href="#" class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
+                            <a href="#"
+                                class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
                                 <i class="fab fa-instagram text-sm"></i>
                             </a>
-                            <a href="#" class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
+                            <a href="#"
+                                class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
                                 <i class="fab fa-twitter text-sm"></i>
                             </a>
-                            <a href="#" class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
+                            <a href="#"
+                                class="bg-orange-600/70 p-2 rounded-full hover:bg-orange-500/80 transition duration-300">
                                 <i class="fab fa-youtube text-sm"></i>
                             </a>
                         </div>
@@ -511,17 +579,21 @@
                     <form class="space-y-4 bg-gray-900/20 backdrop-blur-sm p-6 rounded-xl">
                         <div>
                             <label for="name" class="block text-white mb-1 text-sm">Full Name</label>
-                            <input type="text" id="name" class="w-full px-3 py-2 bg-gray-800/30 border border-orange-300/30 rounded focus:ring-2 focus:ring-orange-300 focus:border-transparent text-white placeholder-orange-200 form-input text-sm">
+                            <input type="text" id="name"
+                                class="w-full px-3 py-2 bg-gray-800/30 border border-orange-300/30 rounded focus:ring-2 focus:ring-orange-300 focus:border-transparent text-white placeholder-orange-200 form-input text-sm">
                         </div>
                         <div>
                             <label for="email" class="block text-white mb-1 text-sm">Email</label>
-                            <input type="email" id="email" class="w-full px-3 py-2 bg-gray-800/30 border border-orange-300/30 rounded focus:ring-2 focus:ring-orange-300 focus:border-transparent text-white placeholder-orange-200 form-input text-sm">
+                            <input type="email" id="email"
+                                class="w-full px-3 py-2 bg-gray-800/30 border border-orange-300/30 rounded focus:ring-2 focus:ring-orange-300 focus:border-transparent text-white placeholder-orange-200 form-input text-sm">
                         </div>
                         <div>
                             <label for="message" class="block text-white mb-1 text-sm">Message</label>
-                            <textarea id="message" rows="4" class="w-full px-3 py-2 bg-gray-800/30 border border-orange-300/30 rounded focus:ring-2 focus:ring-orange-300 focus:border-transparent text-white placeholder-orange-200 form-input text-sm"></textarea>
+                            <textarea id="message" rows="4"
+                                class="w-full px-3 py-2 bg-gray-800/30 border border-orange-300/30 rounded focus:ring-2 focus:ring-orange-300 focus:border-transparent text-white placeholder-orange-200 form-input text-sm"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-orange-600/80 text-white py-2 px-4 rounded font-medium hover:bg-orange-500/90 transition duration-300 btn-primary">
+                        <button type="submit"
+                            class="w-full bg-orange-600/80 text-white py-2 px-4 rounded font-medium hover:bg-orange-500/90 transition duration-300 btn-primary">
                             <i class="fas fa-paper-plane mr-2 text-xs"></i>Send Message
                         </button>
                     </form>
@@ -573,17 +645,17 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                
+
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
                         top: target.offsetTop - 64,
                         behavior: 'smooth'
                     });
-                    
+
                     // Close mobile menu if open
                     mobileMenu.classList.add('hidden');
-                    
+
                     // Update active nav link
                     document.querySelectorAll('.nav-link').forEach(link => {
                         link.classList.remove('active');
@@ -597,18 +669,18 @@
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
             const navLinks = document.querySelectorAll('.nav-link');
-            
+
             let current = '';
-            
+
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                
+
                 if (pageYOffset >= (sectionTop - 65)) {
                     current = section.getAttribute('id');
                 }
             });
-            
+
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href').includes(current)) {
@@ -623,14 +695,14 @@
         // Form submission handling
         const contactForm = document.querySelector('form');
         if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
+            contactForm.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Get form values
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
                 const message = document.getElementById('message').value;
-                
+
                 // Basic validation
                 if (name && email && message) {
                     alert('Terima kasih atas pesan Anda! Kami akan segera menghubungi Anda.');
@@ -663,12 +735,17 @@
         });
 
         // Initialize animations when page loads
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Add initial classes for animation
             document.querySelectorAll('.animate-fade-in').forEach(el => {
                 el.classList.remove('appear');
             });
         });
     </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
